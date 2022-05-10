@@ -1,7 +1,5 @@
-using System.Net.Mime;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Note : MonoBehaviour
 {

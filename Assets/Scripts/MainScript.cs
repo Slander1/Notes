@@ -9,7 +9,7 @@ public class MainScript : MonoBehaviour
     [SerializeField] private AddForm addForm;
     [SerializeField] private Transform content;
     
-    private List<NoteData> _notes = new List<NoteData>();
+    private List<NoteData> _notes;
 
     private void Awake()
     {
@@ -70,6 +70,9 @@ public class MainScript : MonoBehaviour
     private void LoadData()
     {
         _notes = JsonConvert.DeserializeObject<List<NoteData>>(PlayerPrefs.GetString(nameof(_notes)));
+        if (_notes == null)
+            _notes = new List<NoteData>();
+
     }
 
     private void SaveData()

@@ -11,7 +11,7 @@ public class AddForm : MonoBehaviour
     [SerializeField] private Button deleteButton;
 
     private readonly string _warning = "Поле имени не может быть пустым";
-    private int _id;
+    private int _id = -1;
 
     public event Action<int, NoteData> OnSaved;
     public event Action<int> OnDelete; 
